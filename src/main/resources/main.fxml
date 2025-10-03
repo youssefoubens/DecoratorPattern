@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.youssef.controllers.MainController"
+      alignment="CENTER" spacing="10" prefWidth="300" prefHeight="250">
+
+    <Label text="Choisir une boisson:"/>
+    <ChoiceBox fx:id="choiceBoisson"/>
+
+    <CheckBox fx:id="checkSucre" text="Ajouter Sucre"/>
+    <CheckBox fx:id="checkChocolat" text="Ajouter Chocolat"/>
+
+    <Button fx:id="btnCalculer" text="Calculer Prix"/>
+
+    <Label fx:id="lblResult" text="Résultat ici"/>
+</VBox>
