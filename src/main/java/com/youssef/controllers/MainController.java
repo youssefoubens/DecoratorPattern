@@ -29,11 +29,13 @@ public class MainController {
     @FXML
     private Label lblResult;
 
+
+
     @FXML
     public void initialize() {
         choiceBoisson.getItems().addAll("Café", "Thé", "Lait", "Jus");
 
-        btnCalculer.setOnAction(e -> calculerBoisson());
+        btnCalculer.setOnAction(event -> calculerBoisson());
     }
 
     private void calculerBoisson() {
@@ -43,6 +45,7 @@ public class MainController {
             case "Café" -> boisson = new Dera();
             case "Thé" -> boisson = new Expresso();
             case "Lait" -> boisson = new Somatra();
+
 
         }
 
@@ -57,6 +60,9 @@ public class MainController {
             lblResult.setText(
                     boisson.getDescription() + " => Prix: " + boisson.cout() + " DH"
             );
+        }
+        else{
+            lblResult.setText("Veuillez choisir une boisson");
         }
     }
 }
